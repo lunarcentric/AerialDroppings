@@ -8,6 +8,7 @@ public class HealthScript : MonoBehaviour
 	/// <summary>
 	/// Total hitpoints
 	/// </summary>
+	/// Test test
 	public int hp = 1;
 	
 	/// <summary>
