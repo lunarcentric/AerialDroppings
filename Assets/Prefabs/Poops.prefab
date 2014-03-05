@@ -11,7 +11,7 @@ GameObject:
   - 132: {fileID: 13200000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: Score
+  m_Name: Poops
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,7 +24,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: .930000007, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -36,10 +36,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 182065a23a0314111bda45f6424db078, type: 3}
+  m_Script: {fileID: 11500000, guid: cc5cfd837c40f437b8aa655882ae2204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
+  poops: 3
 --- !u!132 &13200000
 GUIText:
   m_ObjectHideFlags: 1
@@ -48,7 +48,7 @@ GUIText:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: Score
+  m_Text: Poops Remaining
   m_Anchor: 0
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
@@ -60,7 +60,7 @@ GUIText:
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
-    rgba: 4278190335
+    rgba: 4294967295
   m_PixelCorrect: 1
   m_RichText: 1
 --- !u!1001 &100100000

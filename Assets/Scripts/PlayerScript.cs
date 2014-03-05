@@ -9,10 +9,17 @@ public class PlayerScript : MonoBehaviour
 	/// 1 - The speed of the ship
 	/// </summary>
 	public Vector2 speed = new Vector2(50, 50);
-	
+
 	// 2 - Store the movement
 	private Vector2 movement;
-	
+	public PoopController poops;
+
+	void Start()
+	{
+		poops = GameObject.Find ("Poops").GetComponent <PoopController>();
+	}
+
+
 	void Update()
 	{
 		// 3 - Retrieve axis information
@@ -33,10 +40,12 @@ public class PlayerScript : MonoBehaviour
 		if (shoot)
 		{
 			WeaponScript weapon = GetComponentInChildren<WeaponScript>();
-			if (weapon != null)
+			if (weapon != null && poops.poops > 0)
 			{
 				// false because the player is not an enemy
 				weapon.Attack(false);
+				poops.poops--;
+
 				//SoundEffectsHelper.Instance.MakePlayerShotSound();
 			}
 		}

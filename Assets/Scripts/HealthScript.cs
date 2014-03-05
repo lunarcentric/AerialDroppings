@@ -8,7 +8,6 @@ public class HealthScript : MonoBehaviour
 	/// <summary>
 	/// Total hitpoints
 	/// </summary>
-	/// Test test
 	public int hp = 1;
 	
 	/// <summary>
@@ -16,13 +15,15 @@ public class HealthScript : MonoBehaviour
 	/// </summary>
 	public bool isEnemy = true;
 
-	//Initialize Score variable
+	//Initialize Score and Poop variables
 	private ScoreController score;
+	private PoopController poops;
 
 
 	//Initialize score prefab
 	void Start () { 
 		score = GameObject.Find ("Score"). GetComponent<ScoreController>();
+		poops = GameObject.Find ("Poops").GetComponent <PoopController>();
 	}
 
 	/// <summary>
@@ -48,6 +49,8 @@ public class HealthScript : MonoBehaviour
 	{
 		// Is this a shot?
 		ShotScript shot = otherCollider.gameObject.GetComponent<ShotScript>();
+		FlyScript fly = otherCollider.gameObject.GetComponent<FlyScript> ();
+
 		if (shot != null)
 		{
 			// Avoid friendly fire
@@ -58,5 +61,11 @@ public class HealthScript : MonoBehaviour
 				Destroy(shot.gameObject); // Remember to always target the game object, otherwise you will just remove the script
 			}
 		}
-	}
+		if (fly != null)
+		{
+
+			Destroy(fly.gameObject);
+			poops.poops++;
+		}
+}
 }
