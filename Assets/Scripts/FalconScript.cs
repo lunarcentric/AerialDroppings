@@ -14,7 +14,6 @@ public class FalconScript : MonoBehaviour {
 	{
 		if (otherCollider.gameObject.name == "Player") {
 			Destroy (gameObject);
-			PlayerScript Player = otherCollider.gameObject.GetComponent <PlayerScript> ();
 			Destroy (otherCollider.gameObject);			
 		}
 		}
