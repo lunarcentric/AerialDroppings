@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: {x: 10, y: 10}
   direction: {x: -1, y: 0}
-  RandomMove: 1
+  RandomMove: 0
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
